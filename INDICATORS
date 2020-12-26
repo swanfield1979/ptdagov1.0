@@ -1,0 +1,48 @@
+MACDSIGNAL_candle_period = 60
+MACDSIGNAL_fast_Length = 8
+MACDSIGNAL_slow_Length = 26
+MACDSIGNAL_signal = 9
+MACDSIGNAL_return_value = SIGNALLINE
+MACDSIGNAL_only_closed_candles = true
+
+MACDLINE_candle_period = 60
+MACDLINE_fast_Length = 8
+MACDLINE_slow_Length = 26
+MACDLINE_signal = 9
+MACDLINE_return_value = MACDLINE
+MACDLINE_only_closed_candles = true
+
+MACDHISTOGRAM_candle_period = 60
+MACDHISTOGRAM_fast_Length = 8
+MACDHISTOGRAM_slow_Length = 26
+MACDHISTOGRAM_signal = 9
+MACDHISTOGRAM_return_value = HISTORGRAM
+
+MACDLINECROSS_fast_indicator_label = MACDLINE
+MACDLINECROSS_fast_indicator = MACD
+MACDLINECROSS_slow_indicator_label = MACDSIGNAL
+MACDLINECROSS_slow_indicator = MACD
+
+1HMACDSIGNAL_candle_period = 3600
+1HMACDSIGNAL_fast_Length = 8
+1HMACDSIGNAL_slow_Length = 26
+1HMACDSIGNAL_signal = 9
+1HMACDSIGNAL_return_value = SIGNALLINE
+1HMACDSIGNAL_only_closed_candles = true
+
+1HMACDLINE_candle_period = 3600
+1HMACDLINE_fast_Length = 8
+1HMACDLINE_slow_Length = 26
+1HMACDLINE_signal = 9
+1HMACDLINE_return_value = MACDLINE
+1HMACDLINE_only_closed_candles = true
+
+1HMACDLINECROSS_fast_indicator_label = 1HMACDLINE
+1HMACDLINECROSS_fast_indicator = MACD
+1HMACDLINECROSS_slow_indicator_label = 1HMACDSIGNAL
+1hMACDLINECROSS_slow_indicator = MACD
+
+RSI_candle_period = 60
+RSI_length = 10
+
+PDLOW_candle_period = 60
