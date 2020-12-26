@@ -1,0 +1,51 @@
+#########################
+#### Dagobert v1.0 ######
+#########################
+#GENERAL SETTINGS########
+#########################
+market = USDT
+enabled_pairs = BTC
+max_trading_pairs = 1
+DEFAULT_buy_leverage = 10
+DEFAULT_buy_margin_type = ISOLATED
+#######################
+#DEFAULT SETTINGS######
+#######################
+DEFAULT_trading_enabled = true
+DEFAULT_DCA_enabled = true
+DEFAULT_initial_cost = 10
+DEFAULT_min_buy_volume = 20000000
+#######################
+#BUY SETTINGS##########
+#######################
+DEFAULT_A_buy_strategy_label = MACDLINECROSS
+DEFAULT_A_buy_strategy = CROSSOVER
+DEFAULT_B_buy_strategy_label = 1HMACDLINE
+DEFAULT_B_buy_strategy = MACD
+DEFAULT_C_buy_strategy_label = 1HMACDSIGNAL
+DEFAULT_C_buy_strategy = MACD
+DEFAULT_D_buy_strategy_label = 1HMACDLINECROSS
+DEFAULT_D_buy_strategy = CROSSOVER
+
+DEFAULT_buy_strategy_formula = A && B > C || D
+
+#######################
+#SELL SETTINGS#########
+#######################
+DEFAULT_trailing_profit = 1.00
+DEFAULT_A_sell_strategy = GAIN
+DEFAULT_A_sell_value = 1.50
+DEFAULT_B_sell_strategy_label = MACDLINECROSS
+DEFAULT_B_sell_strategy = CROSSUNDER
+DEFAULT_C_sell_strategy_label = TRAIL
+DEFAULT_C_sell_strategy = GAIN
+DEFAULT_C_sell_value = 5.00
+DEFAULT_Z_sell_strategy_label = LOWSELL
+DEFAULT_Z_sell_strategy = GAIN
+DEFAULT_Z_sell_value = 0.50
+
+DEFAULT_sell_strategy_formula = A && B || B && Z || C
+DEFAULT_trailing_profit_enabled_formula = C
+
+DEFAULT_take_profit_safety_arm = 5.00
+DEFAULT_take_profit_safety_fire = 2.00
