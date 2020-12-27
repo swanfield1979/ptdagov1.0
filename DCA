@@ -1,6 +1,6 @@
-#########################
-#### Dagobert v0.1 ######
-#########################
+################################################
+# DCA DEFAULT ##################################
+################################################
 DEFAULT_DCA_max_cost = 0
 DEFAULT_DCA_max_buy_times = 5
 DEFAULT_DCA_max_buy_spread = 1.0
@@ -9,9 +9,9 @@ DEFAULT_DCA_ignore_sell_only_mode = true
 DCA_orderbook_profit_calculation = true
 DEFAULT_DCA_panic_sell_enabled = false
 DEFAULT_DCA_buy_timeout = 5
-#######################
-#BUY SETTINGS##########
-#######################
+################################################
+# BUY SETTINGS #################################
+################################################
 DEFAULT_DCA_A_buy_strategy = PROFITPERCENTAGE
 DEFAULT_DCA_A_buy_value_1 = -10
 DEFAULT_DCA_A_buy_value_2 = -20
@@ -26,11 +26,9 @@ DEFAULT_DCA_C_buy_value = 18
 DEFAULT_DCA_D_buy_strategy = PDLOW
 DEFAULT_DCA_D_buy_value = -0.00000001
 DEFAULT_DCA_buy_strategy_formula = (A && B && D) || (C && D)
-
-#######################
-#SELL SETTINGS#########
-#######################
-
+################################################
+# SELL SETTINGS ################################
+################################################
 DEFAULT_DCA_trailing_profit = 0.25
 DEFAULT_DCA_A_sell_strategy = GAIN
 DEFAULT_DCA_A_sell_value = 1.00
@@ -39,9 +37,13 @@ DEFAULT_DCA_B_sell_strategy = CROSSUNDER
 DEFAULT_DCA_C_sell_strategy_label = TRAIL
 DEFAULT_DCA_C_sell_strategy = GAIN
 DEFAULT_DCA_C_sell_value = 5.00
-DEFAULT_DCA_Z_sell_strategy_label = LOWSELL
-DEFAULT_DCA_Z_sell_strategy = GAIN
-DEFAULT_DCA_Z_sell_value = 0.50
-
-DEFAULT_DCA_sell_strategy_formula = A && B || B && Z || C
+DEFAULT_DCA_D_sell_strategy_label = LOWSELL
+DEFAULT_DCA_D_sell_strategy = GAIN
+DEFAULT_DCA_D_sell_value = 0.50
+DEFAULT_DCA_X_sell_strategy_label = 1HCLOSEMACDSIGNAL
+DEFAULT_DCA_X_sell_strategy = MACD
+DEFAULT_DCA_Y_sell_strategy_label = 1HCLOSEMACDLINE
+DEFAULT_DCA_Y_sell_strategy = MACD
+DEFAULT_DCA_sell_strategy_formula = A && B || B && D || C || (SX > SY)
 DEFAULT_DCA_trailing_profit_enabled_formula = C
+################################################
