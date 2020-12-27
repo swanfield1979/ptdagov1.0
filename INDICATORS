@@ -1,3 +1,6 @@
+################################################
+# ENTRY SIGNAL #################################
+################################################
 MACDSIGNAL_candle_period = 60
 MACDSIGNAL_fast_Length = 8
 MACDSIGNAL_slow_Length = 26
@@ -22,27 +25,46 @@ MACDLINECROSS_fast_indicator_label = MACDLINE
 MACDLINECROSS_fast_indicator = MACD
 MACDLINECROSS_slow_indicator_label = MACDSIGNAL
 MACDLINECROSS_slow_indicator = MACD
-
+################################################
+# TREND SIGNAL #################################
+################################################
 1HMACDSIGNAL_candle_period = 3600
 1HMACDSIGNAL_fast_Length = 8
 1HMACDSIGNAL_slow_Length = 26
 1HMACDSIGNAL_signal = 9
 1HMACDSIGNAL_return_value = SIGNALLINE
-1HMACDSIGNAL_only_closed_candles = true
 
 1HMACDLINE_candle_period = 3600
 1HMACDLINE_fast_Length = 8
 1HMACDLINE_slow_Length = 26
 1HMACDLINE_signal = 9
 1HMACDLINE_return_value = MACDLINE
-1HMACDLINE_only_closed_candles = true
 
 1HMACDLINECROSS_fast_indicator_label = 1HMACDLINE
 1HMACDLINECROSS_fast_indicator = MACD
 1HMACDLINECROSS_slow_indicator_label = 1HMACDSIGNAL
 1hMACDLINECROSS_slow_indicator = MACD
+################################################
+# EXIT SIGNAL ##################################
+################################################
+1HCLOSEMACDSIGNAL_candle_period = 3600
+1HCLOSEMACDSIGNAL_fast_Length = 8
+1HCLOSEMACDSIGNAL_slow_Length = 26
+1HCLOSEMACDSIGNAL_signal = 9
+1HCLOSEMACDSIGNAL_return_value = SIGNALLINE
+1HCLOSEMACDSIGNAL_only_closed_candles = true
 
+1HCLOSEMACDLINE_candle_period = 3600
+1HCLOSEMACDLINE_fast_Length = 8
+1HCLOSEMACDLINE_slow_Length = 26
+1HCLOSEMACDLINE_signal = 9
+1HCLOSEMACDLINE_return_value = MACDLINE
+1HCLOSEMACDLINE_only_closed_candles = true
+################################################
+# DCA SIGNAL ###################################
+################################################
 RSI_candle_period = 60
 RSI_length = 10
 
 PDLOW_candle_period = 60
+################################################
